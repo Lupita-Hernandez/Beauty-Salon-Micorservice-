@@ -18,7 +18,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/v1/stylists/**").hasRole("ADMIN")
                         .requestMatchers("/api/v1/users/**").hasRole("ADMIN")
                         .requestMatchers("/graphql/**").hasRole("ADMIN")
-                        .requestMatchers("/api/v1/services/**").hasRole("STYLIST")
+                        .requestMatchers("/api/v1/services/**").hasAnyRole("STYLIST", "ADMIN")
                         .anyRequest().authenticated())
                 .httpBasic(withDefaults()).csrf(csrf -> csrf.disable())
 
