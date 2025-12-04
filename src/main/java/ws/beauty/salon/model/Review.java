@@ -1,4 +1,4 @@
-package ws.beauty.salon.model;
+    package ws.beauty.salon.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
